@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>LOGIN</title>
+</head>
+<body>
+<div style="background-color:salmon;width:20%;height:30%;float:left;padding-bottom:20px;padding-left:50px;padding-top:20px;margin-left:450px;margin-top:10px;">
+<label>value1</label>
+<input id="txtvalue1" type="text"/>
+<p style="color:red" id="value1"></p></br>
+<label>value2</label>
+<input id="txtvalue2" type="text"/>
+<p style="color:red" id="value2"></p></br>
+<button style="color:white;background-color:green;" onclick="Add()">Add</button><p id="msg"></p>
+<label>output: <p id='addvalues'></p></label>
+</div>
+
+<div style="background-color:salmon;width:20%;height:30%;float:left;padding-bottom:20px;padding-left:50px;padding-top:20px;margin-left:450px;margin-top:10px;">
+<label>value1</label>
+<input id="txtsubvalue1" type="text"/>
+<p style="color:red" id="subvalue1"></p></br>
+<label>value2</label>
+<input id="txtsubvalue2" type="text"/>
+<p style="color:red" id="subvalue2"></p></br>
+<button style="color:white;background-color:green;" onclick="Sub()">Sub</button><p id="msg"></p>
+<label>output: <p id='Subvalues'></p></label>
+</div>
+
+<div style="background-color:salmon;width:20%;height:30%;float:left;padding-bottom:20px;padding-left:50px;padding-top:20px;margin-left:450px;margin-top:10px;">
+<label>value1</label>
+<input id="txtmulvalue1" type="text"/>
+<p style="color:red" id="mulvalue1"></p></br>
+<label>value2</label>
+<input id="txtmulvalue2" type="text"/>
+<p style="color:red" id="mulvalue2"></p></br>
+<button style="color:white;background-color:green;" onclick="Mul()">Mul</button><p id="msg"></p>
+<label>output: <p id='Mulvalues'></p></label>
+</div>
+
+<div style="background-color:salmon;width:20%;height:30%;float:left;padding-bottom:20px;padding-left:50px;padding-top:20px;margin-left:450px;margin-top:10px;">
+<label>value1</label>
+<input id="txtdivvalue1" type="text"/>
+<p style="color:red" id="divvalue1"></p></br>
+<label>value2</label>
+<input id="txtdivvalue2" type="text"/>
+<p style="color:red" id="divvalue2"></p></br>
+<button style="color:white;background-color:green;" onclick="Div()">Div</button><p id="msg"></p>
+<label>output: <p id='divvalues'></p></label>
+</div>
+
+<script>
+function Add()
+{
+var value1=document.getElementById("txtvalue1").value;
+console.log(value1);
+var value2=document.getElementById("txtvalue2").value;
+console.log(value2);
+if(value1==''){
+document.getElementById("value1").innerHTML="value1";
+}
+if(value2==''){
+document.getElementById("value2").innerHTML="value2";
+}
+if(value1!=''&&value2!=''){
+document.getElementById("addvalues").innerHTML=parseInt(value1)+parseInt(value2);
+}
+}
+
+function Sub()
+{
+var value1=document.getElementById("txtsubvalue1").value;
+console.log(value1);
+var value2=document.getElementById("txtsubvalue2").value;
+console.log(value2);
+if(value1==''){
+document.getElementById("subvalue1").innerHTML="value1";
+}
+if(value2==''){
+document.getElementById("subvalue2").innerHTML="value2";
+}
+if(value1!=''&&value2!=''){
+document.getElementById("Subvalues").innerHTML=parseInt(value1)-parseInt(value2);
+}
+}
+
+function Mul()
+{
+var value1=document.getElementById("txtmulvalue1").value;
+console.log(value1);
+var value2=document.getElementById("txtmulvalue2").value;
+console.log(value2);
+if(value1==''){
+document.getElementById("mulvalue1").innerHTML="value1";
+}
+if(value2==''){
+document.getElementById("mulvalue2").innerHTML="value2";
+}
+if(value1!=''&&value2!=''){
+document.getElementById("Mulvalues").innerHTML=parseInt(value1)*parseInt(value2);
+}
+}
+
+function Div()
+{
+var value1=document.getElementById("txtdivvalue1").value;
+console.log(value1);
+var value2=document.getElementById("txtdivvalue2").value;
+console.log(value2);
+if(value1==''){
+document.getElementById("divvalue1").innerHTML="value1";
+}
+if(value2==''){
+document.getElementById("divvalue2").innerHTML="value2";
+}
+if(value1!=''&&value2!=''){
+document.getElementById("divvalues").innerHTML=parseInt(value1)/parseInt(value2);
+}
+}
+</script>
+</body>
+</html>
